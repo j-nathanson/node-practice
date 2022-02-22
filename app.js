@@ -6,7 +6,7 @@ function solveRect(l, w) {
     console.log(`Solving for rectangle with dimensions: ${l}, ${w}`);
 
     // first validate inputs greater than 0,
-    //  if it fails the callback will have just error argument which is truthy so it will console log the error object's msaage
+    //  if it fails the callback will have just error argument which is truthy so it will console log the error object's message
     //  if it passes then it will wait 2 seconds and then the callback function will have 'null' for error argument and an object 'rectangle' which has 2 methods
     rect(l, w, (err, rectangle) => {
         if (err) {
