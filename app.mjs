@@ -1,13 +1,8 @@
-// import the function from the rectangle file
-const rect = require('./rectangle');
+import rect from './rectangle.mjs';
 
 function solveRect(l, w) {
-    // console log inputs
     console.log(`Solving for rectangle with dimensions: ${l}, ${w}`);
 
-    // first validate inputs greater than 0,
-    //  if it fails the callback will have just error argument which is truthy so it will console log the error object's message
-    //  if it passes then it will wait 2 seconds and then the callback function will have 'null' for error argument and an object 'rectangle' which has 2 methods
     rect(l, w, (err, rectangle) => {
         if (err) {
             console.log('ERROR:', err.message);
@@ -18,8 +13,6 @@ function solveRect(l, w) {
     });
     console.log('This statement is logged after the call to rect()');
 }
-
-// setTimeout is not called for invalid inputs
 
 solveRect(2, 4);
 solveRect(3, 5);
